@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>My Web AR Experience</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- A-Frame + AR.js: marker-based WebAR, served over HTTPS -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.7/aframe/build/aframe-ar.js"></script>
+  <script>
+    window.THREEx = window.THREEx || {};
+    AFRAME.registerComponent('arjs-anchor', {
+      init: function () {
+        this.el.sceneEl.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      }
+    });
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">WEB AR DEMO</p>
+      <h1>Bring your image to life</h1>
+    </div>
+    <span class="status" id="status">Camera starts in AR view</span>
+  </header>
+
+  <main>
+    <section class="viewer" aria-label="Augmented reality camera view">
+      <a-scene
+        embedded
+        arjs="sourceType: webcam; facingMode: environment; debugUIEnabled: false;"
+        renderer="antialias: true; alpha: true; colorManagement: true;"
+        vr-mode-ui="enabled: false"
+        loading-screen="enabled: false"
+        arjs-anchor>
+        <a-assets>
+          <img id="demo-image" src="assets/images/demo.svg" crossorigin="anonymous">
+          <video id="demo-video" src="assets/videos/demo.mp4"
+                 preload="auto" loop muted playsinline crossorigin="anonymous"></video>
+        </a-assets>
+
+        <!-- Point your camera at a printed Hiro marker to show this content. -->
+        <a-marker preset="hiro" id="hiro-marker">
+          <a-image id="ar-image" src="#demo-image"
+                   position="0 0.75 0" rotation="-90 0 0"
+                   width="1.25" height="0.8"
+                   material="shader: flat; transparent: true"></a-image>
+
+          <a-video id="ar-video" src="#demo-video"
+                   position="0 0.75 0.02" rotation="-90 0 0"
+                   width="1.25" height="0.8"
+                   visible="false"></a-video>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+      </a-scene>
+
+      <div class="hint" id="hint">
+        <strong>How to start</strong>
+        <span>Allow camera access, then point it at a Hiro marker.</span>
+      </div>
+    </section>
+
+    <section class="controls">
+      <div>
+        <h2>AR content</h2>
+        <p>Choose what appears above the marker.</p>
+      </div>
+      <div class="button-row">
+        <button type="button" class="active" id="image-btn">Show image</button>
+        <button type="button" id="video-btn">Show video</button>
+      </div>
+      <p class="note">The included demo image works immediately. Add your own MP4 at
+        <code>assets/videos/demo.mp4</code> to use the video mode.</p>
+    </section>
+  </main>
+
+  <footer>Built with A-Frame + AR.js · Runs on a secure HTTPS website</footer>
+  <script src="script.js"></script>
+</body>
+</html>
