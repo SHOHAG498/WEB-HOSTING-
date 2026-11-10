@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Web AR Experience</title>
+    <title>About Me - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- AR Viewport / Container -->
-    <div id="ar-viewport">
-        <div class="scanner-overlay">
-            <div class="scan-box"></div>
-            <p>Point camera at target marker</p>
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="profile-card">
+            <div class="avatar-box">
+                <!-- আপনার প্রোফাইল ছবি বা প্রথম অক্ষর -->
+                <span>SR</span>
+            </div>
+            <h1>SR Shohag</h1>
+            <p class="tagline">Tech Enthusiast & Developer</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Hello! I am a passionate creator who loves coding, building web applications, exploring technology, and developing cool projects.</p>
+        </div>
+
+        <!-- Skills / Interests -->
+        <div class="section">
+            <h2>Interests & Skills</h2>
+            <div class="tags">
+                <span>Web Development</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+                <span>GitHub</span>
+                <span>Problem Solving</span>
+            </div>
+        </div>
+
+        <!-- Social / Contact Button -->
+        <div class="action-box">
+            <a href="https://github.com/SHOHAG498" target="_blank" class="pro-btn">Visit My GitHub</a>
         </div>
     </div>
-
-    <!-- Professional UI Bottom Panel -->
-    <div class="ui-panel">
-        <h2>Web AR Portal</h2>
-        <p>Experience immersive augmented reality directly in your browser.</p>
-        <button id="ar-btn" class="pro-btn">Launch Experience</button>
-    </div>
-
-    <script src="index.js"></script>
 </body>
 </html>
