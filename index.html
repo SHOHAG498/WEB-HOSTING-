@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Portfolio</title>
+    <title>E-Commerce Web AR Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Profile Header -->
-        <div class="profile-card">
-            <div class="avatar-box">
-                <!-- আপনার প্রোফাইল ছবি বা প্রথম অক্ষর -->
-                <span>SR</span>
+    <header class="navbar">
+        <h1>AR Store</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">3D Model</div>
+                <h3>AR Sneaker Pro</h3>
+                <p class="price">$99.00</p>
+                <div class="btn-group">
+                    <a href="ar.html?product=sneaker" class="btn ar-btn">View in AR</a>
+                    <button class="btn buy-btn">Add to Cart</button>
+                </div>
             </div>
-            <h1>SR Shohag</h1>
-            <p class="tagline">Tech Enthusiast & Developer</p>
-        </div>
 
-        <!-- About Section -->
-        <div class="section">
-            <h2>About Me</h2>
-            <p>Hello! I am a passionate creator who loves coding, building web applications, exploring technology, and developing cool projects.</p>
-        </div>
-
-        <!-- Skills / Interests -->
-        <div class="section">
-            <h2>Interests & Skills</h2>
-            <div class="tags">
-                <span>Web Development</span>
-                <span>JavaScript</span>
-                <span>Python</span>
-                <span>GitHub</span>
-                <span>Problem Solving</span>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-img-placeholder">3D Model</div>
+                <h3>AR Smart Watch</h3>
+                <p class="price">$149.00</p>
+                <div class="btn-group">
+                    <a href="ar.html?product=watch" class="btn ar-btn">View in AR</a>
+                    <button class="btn buy-btn">Add to Cart</button>
+                </div>
             </div>
         </div>
-
-        <!-- Social / Contact Button -->
-        <div class="action-box">
-            <a href="https://github.com/SHOHAG498" target="_blank" class="pro-btn">Visit My GitHub</a>
-        </div>
-    </div>
+    </main>
 </body>
 </html>
