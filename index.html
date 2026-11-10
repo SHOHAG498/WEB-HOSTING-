@@ -3,43 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Web AR Store</title>
+    <title>SR Online Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header class="navbar">
-        <h1>AR Store</h1>
+        <div class="logo">SR Shop</div>
         <nav>
             <a href="index.html" class="active">Home</a>
-            <a href="cart.html">Cart</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
+    <!-- Banner Section -->
+    <section class="banner">
+        <h2>Welcome to SR Online Shop</h2>
+        <p>Get the best products at the lowest price!</p>
+    </section>
+
+    <!-- Main Products Grid -->
     <main class="container">
-        <h2>Featured Products</h2>
+        <h2 class="section-title">Featured Products</h2>
         <div class="product-grid">
+            
             <!-- Product Card 1 -->
             <div class="product-card">
-                <div class="product-img-placeholder">3D Model</div>
-                <h3>AR Sneaker Pro</h3>
-                <p class="price">$99.00</p>
+                <div class="product-img">🎧</div>
+                <h3>Wireless Headphones</h3>
+                <p class="price">$49.99</p>
                 <div class="btn-group">
-                    <a href="ar.html?product=sneaker" class="btn ar-btn">View in AR</a>
+                    <a href="details.html?id=1" class="btn view-btn">View Details</a>
                     <button class="btn buy-btn">Add to Cart</button>
                 </div>
             </div>
 
             <!-- Product Card 2 -->
             <div class="product-card">
-                <div class="product-img-placeholder">3D Model</div>
-                <h3>AR Smart Watch</h3>
-                <p class="price">$149.00</p>
+                <div class="product-img">⌚</div>
+                <h3>Smart Watch Pro</h3>
+                <p class="price">$89.99</p>
                 <div class="btn-group">
-                    <a href="ar.html?product=watch" class="btn ar-btn">View in AR</a>
+                    <a href="details.html?id=2" class="btn view-btn">View Details</a>
                     <button class="btn buy-btn">Add to Cart</button>
                 </div>
             </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-img">👟</div>
+                <h3>Running Shoes</h3>
+                <p class="price">$59.99</p>
+                <div class="btn-group">
+                    <a href="details.html?id=3" class="btn view-btn">View Details</a>
+                    <button class="btn buy-btn">Add to Cart</button>
+                </div>
+            </div>
+
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 SR Shop. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
